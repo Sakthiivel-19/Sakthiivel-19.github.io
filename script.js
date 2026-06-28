@@ -21,6 +21,32 @@
     localStorage.setItem("theme", next);
   });
 
+  /* ---------- Resume button (graceful if the PDF isn't uploaded yet) ---------- */
+  const resumeBtn = document.getElementById("resumeBtn");
+  if (resumeBtn) {
+    resumeBtn.addEventListener("click", function (e) {
+      const href = resumeBtn.getAttribute("href");
+      // Check the file exists before letting the download proceed.
+      fetch(href, { method: "HEAD" })
+        .then(function (res) {
+          if (!res.ok) throw new Error("missing");
+          // File exists — trigger the download manually (we cancelled the default).
+          const a = document.createElement("a");
+          a.href = href;
+          a.download = "";
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        })
+        .catch(function () {
+          const old = resumeBtn.textContent;
+          resumeBtn.textContent = "📄 Resume coming soon!";
+          setTimeout(function () { resumeBtn.textContent = old; }, 2500);
+        });
+      e.preventDefault();
+    });
+  }
+
   /* ---------- Navbar shadow on scroll ---------- */
   const nav = document.getElementById("nav");
   const onScroll = function () {
