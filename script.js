@@ -194,22 +194,29 @@
   form.addEventListener("submit", function (e) {
     const action = form.getAttribute("action") || "";
 
-    // If Formspree isn't configured yet, fall back to the user's mail client.
-    if (action.indexOf("YOUR_FORM_ID") !== -1) {
-      e.preventDefault();
-      const name = encodeURIComponent(form.name.value);
+    const SENT_MSG = "✅ Thank you for reaching out! Your message has been sent — I'll get back to you soon. Best regards, Sakthivel R.";
+
+    // Fallback: hand off to the visitor's email app (used if Formspree can't be
+    // reached — e.g. opened as a local file, an ad-blocker, or no network).
+    function mailFallback() {
+      const subject = encodeURIComponent("Portfolio contact from " + form.name.value);
       const body = encodeURIComponent(form.message.value + "\n\n— " + form.name.value + " (" + form.email.value + ")");
       window.location.href =
-        "mailto:contact.sakthii19@gmail.com?subject=" +
-        encodeURIComponent("Portfolio contact from " + decodeURIComponent(name)) +
-        "&body=" + body;
-      status.textContent = "✅ Thank you for reaching out! Your message has been sent — I'll get back to you soon. Best regards, Sakthivel R.";
+        "mailto:contact.sakthii19@gmail.com?subject=" + subject + "&body=" + body;
+      form.reset();
+      status.textContent = SENT_MSG;
       status.className = "form-status ok";
+    }
+
+    e.preventDefault();
+
+    // If Formspree isn't configured, go straight to the email fallback.
+    if (action.indexOf("YOUR_FORM_ID") !== -1 || action.indexOf("formspree.io") === -1) {
+      mailFallback();
       return;
     }
 
-    // Real Formspree submission via fetch (no page reload).
-    e.preventDefault();
+    // Real Formspree submission via fetch (no page reload, no email app).
     status.textContent = "Sending…";
     status.className = "form-status";
 
@@ -221,16 +228,16 @@
       .then(function (res) {
         if (res.ok) {
           form.reset();
-          status.textContent = "✅ Thank you for reaching out! Your message has been sent — I'll get back to you soon. Best regards, Sakthivel R.";
+          status.textContent = SENT_MSG;
           status.className = "form-status ok";
         } else {
-          status.textContent = "Something went wrong. Please email me directly.";
-          status.className = "form-status err";
+          // Formspree reachable but rejected (e.g. not yet activated) — hand off to email.
+          mailFallback();
         }
       })
       .catch(function () {
-        status.textContent = "Network error. Please email me directly.";
-        status.className = "form-status err";
+        // Network blocked (local file / ad-blocker / offline) — hand off to email.
+        mailFallback();
       });
   });
 })();
