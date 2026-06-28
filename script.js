@@ -221,7 +221,7 @@
       .then(function (res) {
         if (res.ok) {
           form.reset();
-          status.textContent = "✅ Thanks! Your message has been sent.";
+          status.textContent = "✅ Thank you for reaching out! Your message has been sent — I'll get back to you soon. Best regards, Sakthivel R.";
           status.className = "form-status ok";
         } else {
           status.textContent = "Something went wrong. Please email me directly.";
