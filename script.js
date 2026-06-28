@@ -8,11 +8,12 @@
 
   /* ---------- Theme toggle (persisted + respects system) ---------- */
   const themeToggle = document.getElementById("themeToggle");
+  // Default theme is light (set on <html>). We intentionally do NOT auto-switch
+  // to the visitor's system dark preference — the portfolio opens in light mode.
+  // A visitor's manual toggle choice is still remembered across visits.
   const saved = localStorage.getItem("theme");
   if (saved) {
     root.setAttribute("data-theme", saved);
-  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    root.setAttribute("data-theme", "dark");
   }
   themeToggle.addEventListener("click", function () {
     const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
