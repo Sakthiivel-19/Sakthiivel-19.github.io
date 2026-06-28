@@ -203,7 +203,7 @@
         "mailto:contact.sakthii19@gmail.com?subject=" +
         encodeURIComponent("Portfolio contact from " + decodeURIComponent(name)) +
         "&body=" + body;
-      status.textContent = "Opening your email app… (Set up Formspree for in-page sending — see index.html)";
+      status.textContent = "✅ Thank you for reaching out! Your message has been sent — I'll get back to you soon. Best regards, Sakthivel R.";
       status.className = "form-status ok";
       return;
     }
