@@ -201,10 +201,10 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 .about-text p { color: var(--text-soft); margin-bottom: 18px; font-size: 1.06rem; }
 .about-facts { list-style: none; background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 8px 22px; box-shadow: var(--shadow-sm); }
-.about-facts li { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+.about-facts li { display: flex; flex-direction: column; gap: 5px; padding: 15px 0; border-bottom: 1px solid var(--border); }
 .about-facts li:last-child { border-bottom: none; }
-.fact-label { color: var(--text-soft); font-size: 0.9rem; }
-.fact-value { font-weight: 600; text-align: right; }
+.fact-label { color: var(--text-soft); font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+.fact-value { font-weight: 600; font-size: 1rem; }
 
 /* ---------- Skills ---------- */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
