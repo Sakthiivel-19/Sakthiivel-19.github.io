@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakthivel R — AI &amp; ML Engineer</title>
+  <meta name="description"
+    content="Portfolio of Sakthivel R, AI &amp; ML Engineer and 3rd-year engineering student building modern AI-powered applications and production-ready systems." />
+
+  <!-- Open Graph (nice link previews when shared) -->
+  <meta property="og:title" content="Sakthivel R — AI &amp; ML Engineer" />
+  <meta property="og:description" content="Building modern AI-powered applications and production-ready systems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts (graceful fallback to system fonts when offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Devicon — colored brand logos for the Skills section -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+</head>
+
+<body>
+  <!-- Scroll progress bar -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Cursor glow (desktop only) -->
+  <div id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Decorative animated gradient blobs -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo" aria-label="Home">
+        <span class="logo-mark">SR</span>
+        <span class="logo-text">Sakthivel R</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow reveal">👋 Hello, I'm</p>
+          <h1 class="hero-name reveal">Sakthivel R</h1>
+          <h2 class="hero-title reveal">
+            <span class="gradient-text" id="typewriterText"></span><span class="typewriter-cursor">|</span>
+          </h2>
+          <p class="hero-bio reveal">
+            I build modern, AI-powered applications and production-ready systems — blending
+            clean frontends, robust backends, and scalable infrastructure to ship impactful,
+            industry-level solutions.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="Sakthivel_R_Resume.pdf" class="btn btn-ghost" id="resumeBtn" download>Download Resume</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+          <div class="hero-socials reveal">
+            <a href="https://github.com/Sakthiivel-19" target="_blank" rel="noopener" aria-label="GitHub"
+              title="GitHub">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path
+                  d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z" />
+              </svg>
+            </a>
+            <a href="https://in.linkedin.com/in/sakthivelr19" target="_blank" rel="noopener" aria-label="LinkedIn"
+              title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+              </svg>
+            </a>
+            <a href="mailto:contact.sakthii19@gmail.com" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-10 6L2 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-avatar-wrapper reveal">
+          <div class="avatar-glow-ring" aria-hidden="true"></div>
+          <div class="avatar-circle">
+            <img src="profile.jpg" alt="Sakthivel R" class="hero-avatar-img" />
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title reveal">A bit about me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a 3rd-year Artificial Intelligence &amp; Machine Learning engineering student
+              based in Chennai, driven by a passion for AI-powered automation and modern web
+              development. I enjoy building clean, practical software — from automation that solves
+              real problems to responsive, user-friendly web applications.
+            </p>
+            <p>
+              I work across the stack with Python and JavaScript, along with tools like FastAPI,
+              Node.js, PostgreSQL, and Docker. I learn best by building — turning ideas into working
+              projects, contributing on GitHub, and continuously sharpening my skills toward becoming
+              a strong, well-rounded software developer who ships impactful, real-world solutions.
+            </p>
+          </div>
+          <ul class="about-facts reveal">
+            <li>
+              <span class="fact-icon">📍</span>
+              <div class="fact-body">
+                <span class="fact-label">Location</span>
+                <span class="fact-value">Chennai, Tamil Nadu</span>
+              </div>
+            </li>
+            <li>
+              <span class="fact-icon">🎯</span>
+              <div class="fact-body">
+                <span class="fact-label">Focus</span>
+                <span class="fact-value">AI / ML · Full-Stack Dev</span>
+              </div>
+            </li>
+            <li>
+              <span class="fact-icon">🎓</span>
+              <div class="fact-body">
+                <span class="fact-label">Degree</span>
+                <span class="fact-value">B.E. AI &amp; ML (2028)</span>
+              </div>
+            </li>
+            <li>
+              <span class="fact-icon">🤝</span>
+              <div class="fact-body">
+                <span class="fact-label">Open to</span>
+                <span class="fact-value">Internships &amp; Jobs</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal">Tech I work with</h2>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-card-badge">🧬</span>
+              <h3>Languages</h3>
+            </div>
+            <ul class="skill-list">
+              <li class="skill"><i class="devicon-python-plain colored"></i><span>Python</span></li>
+              <li class="skill"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-card-header skill-card-header--2">
+              <span class="skill-card-badge">🖥️</span>
+              <h3>Frontend</h3>
+            </div>
+            <ul class="skill-list">
+              <li class="skill"><i class="devicon-html5-plain colored"></i><span>HTML5</span></li>
+              <li class="skill"><i class="devicon-css3-plain colored"></i><span>CSS3</span></li>
+              <li class="skill"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-card-header skill-card-header--3">
+              <span class="skill-card-badge">⚙️</span>
+              <h3>Backend</h3>
+            </div>
+            <ul class="skill-list">
+              <li class="skill"><i class="devicon-fastapi-plain colored"></i><span>FastAPI</span></li>
+              <li class="skill"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></li>
+              <li class="skill"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></li>
+              <li class="skill"><span class="skill-emoji">🔗</span><span>REST APIs</span></li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-card-header skill-card-header--4">
+              <span class="skill-card-badge">🛠️</span>
+              <h3>Tools</h3>
+            </div>
+            <ul class="skill-list">
+              <li class="skill"><i class="devicon-docker-plain colored"></i><span>Docker</span></li>
+              <li class="skill"><i class="devicon-git-plain colored"></i><span>Git</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-kicker reveal">03 — Projects</p>
+        <h2 class="section-title reveal">Things I've built</h2>
+        <p class="section-lead reveal">
+          A few selected projects. Explore everything on my
+          <a href="https://github.com/Sakthiivel-19" target="_blank" rel="noopener">GitHub</a>.
+        </p>
+        <div class="projects-grid" id="projectsGrid">
+        </div>
+        <p class="projects-empty reveal">🚧 New projects coming soon — stay tuned!</p>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <p class="section-kicker reveal">04 — Experience</p>
+        <h2 class="section-title reveal">Where I've worked</h2>
+        <div class="exp-card reveal">
+          <div class="exp-accent-bar"></div>
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-role">Software Development Intern</h3>
+              <p class="exp-org">TASC Outsourcing</p>
+            </div>
+            <span class="exp-period">Jun 2026 – Jul 2026</span>
+          </div>
+          <p class="exp-summary">
+            Built responsive user interfaces and modern web layouts through hands-on frontend
+            tasks and real-world development exercises — strengthening core web fundamentals
+            and professional development workflows.
+          </p>
+          <ul class="exp-points">
+            <li>Developed responsive layouts with HTML5, CSS3 and Flexbox for clean, modern UI alignment.</li>
+            <li>Applied advanced styling — gradients, transitions, opacity, border-radius and positioning.</li>
+            <li>Worked with pseudo-elements, selectors, display properties and z-index for polished interfaces.</li>
+            <li>Structured reusable UI components using a consistent class/spacing system.</li>
+            <li>Used Git &amp; GitHub for version control and improved debugging workflows.</li>
+          </ul>
+          <ul class="chips chips-sm exp-tech">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Certifications ===== -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <p class="section-kicker reveal">05 — Certifications</p>
+        <h2 class="section-title reveal">Certifications &amp; courses</h2>
+        <p class="section-lead reveal">
+          Credentials I've earned while continuously sharpening my skills in AI, data, and software.
+        </p>
+        <div class="cert-grid">
+          <article class="cert-card reveal">
+            <div class="cert-accent" style="--cert-color: #06B6D4"></div>
+            <div class="cert-icon-wrap" style="--cert-color: #06B6D4">🤖</div>
+            <div class="cert-body">
+              <h3 class="cert-name">Introduction to Machine Learning</h3>
+              <p class="cert-meta">Kaggle · <span class="cert-year">2026</span></p>
+            </div>
+            <div class="cert-shimmer"></div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="cert-accent" style="--cert-color: #A855F7"></div>
+            <div class="cert-icon-wrap" style="--cert-color: #A855F7">✨</div>
+            <div class="cert-body">
+              <h3 class="cert-name">Introduction to Generative AI</h3>
+              <p class="cert-meta">Google Cloud · <span class="cert-year">2026</span></p>
+            </div>
+            <div class="cert-shimmer"></div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="cert-accent" style="--cert-color: #F59E0B"></div>
+            <div class="cert-icon-wrap" style="--cert-color: #F59E0B">📈</div>
+            <div class="cert-body">
+              <h3 class="cert-name">GenAI-Powered Data Analytics Job Simulation</h3>
+              <p class="cert-meta">Tata (Forage) · <span class="cert-year">2026</span></p>
+            </div>
+            <div class="cert-shimmer"></div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="cert-accent" style="--cert-color: #10B981"></div>
+            <div class="cert-icon-wrap" style="--cert-color: #10B981">🐍</div>
+            <div class="cert-body">
+              <h3 class="cert-name">Python Essentials</h3>
+              <p class="cert-meta">Cisco Networking Academy · <span class="cert-year">2026</span></p>
+            </div>
+            <div class="cert-shimmer"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <p class="section-kicker reveal">06 — Education</p>
+        <h2 class="section-title reveal">My academic journey</h2>
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">Expected 2028</span>
+              <h3>Bachelor of Engineering (B.E.) — AI &amp; Machine Learning</h3>
+              <p>S A Engineering College</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2023</span>
+              <h3>Higher Secondary School</h3>
+              <p>Velammal Matric. Hr. Sec. School · <strong>83%</strong></p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2021</span>
+              <h3>High School</h3>
+              <p>Velammal Matric. Hr. Sec. School · <strong>75%</strong></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="section-kicker reveal">07 — Contact</p>
+        <h2 class="section-title reveal">Let's build something</h2>
+        <p class="section-lead reveal">
+          Have an opportunity, a project idea, or just want to say hi? Send a message —
+          I'll get back to you.
+        </p>
+
+        <div class="contact-grid">
+          <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xkolbvbb" method="POST">
+            <div class="field floating">
+              <input type="text" id="name" name="name" placeholder=" " required />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="field floating">
+              <input type="email" id="email" name="email" placeholder=" " required />
+              <label for="email">Email Address</label>
+            </div>
+            <div class="field floating">
+              <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message ✉️</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+
+          <aside class="contact-info reveal">
+            <a class="contact-line" href="mailto:contact.sakthii19@gmail.com">
+              <span class="contact-ic" style="--ic-color: #06B6D4">✉️</span>
+              <span><strong>Email</strong><br>contact.sakthii19@gmail.com</span>
+            </a>
+            <a class="contact-line" href="https://github.com/Sakthiivel-19" target="_blank" rel="noopener">
+              <span class="contact-ic" style="--ic-color: #8B949E">🐙</span>
+              <span><strong>GitHub</strong><br>Sakthiivel-19</span>
+            </a>
+            <a class="contact-line" href="https://in.linkedin.com/in/sakthivelr19" target="_blank" rel="noopener">
+              <span class="contact-ic" style="--ic-color: #0A66C2">💼</span>
+              <span><strong>LinkedIn</strong><br>sakthivelr19</span>
+            </a>
+            <a class="contact-line" href="#" onclick="return false">
+              <span class="contact-ic" style="--ic-color: #F59E0B">📍</span>
+              <span><strong>Location</strong><br>Chennai, Tamil Nadu</span>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> <span class="gradient-text">Sakthivel R</span></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
