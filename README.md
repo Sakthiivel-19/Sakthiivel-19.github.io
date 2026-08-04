@@ -2,9 +2,9 @@
 
 My personal portfolio website, built as a clean, responsive, and interactive single-page site.
 
-🔗 **Live site:** https://sakthiivel-19.github.io
+**Live site:** https://sakthiivel-19.github.io
 
-## ✨ Features
+## Features
 
 - **Light / dark theme** toggle (remembers your choice)
 - **Live GitHub projects** — new public repos appear automatically via the GitHub API
@@ -13,7 +13,7 @@ My personal portfolio website, built as a clean, responsive, and interactive sin
 - **Working contact form** (Formspree) with an email fallback
 - Sections: About · Skills · Projects · Experience · Education · Contact
 
-## 🛠️ Built with
+## Built with
 
 - HTML5
 - CSS3 (custom properties, flexbox, grid)
@@ -22,11 +22,11 @@ My personal portfolio website, built as a clean, responsive, and interactive sin
 - [Formspree](https://formspree.io) for the contact form
 - Hosted on **GitHub Pages**
 
-## 🚀 Run locally
+## Run locally
 
 Just open `index.html` in a browser — no build step required.
 
-## 📫 Contact
+## Contact
 
 - **Email:** contact.sakthii19@gmail.com
 - **GitHub:** [@Sakthiivel-19](https://github.com/Sakthiivel-19)

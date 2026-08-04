@@ -681,7 +681,16 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
   font-size: 1.5rem;
   flex-shrink: 0;
   width: 36px;
-  text-align: center;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+}
+
+.fact-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
 }
 
 .fact-body {
@@ -760,6 +769,15 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
 
 .skill-card-badge {
   font-size: 1.3rem;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+}
+
+.skill-card-badge svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
 }
 
 .skill-card-header h3 {
@@ -804,6 +822,14 @@ html[data-theme="dark"] .skill {
   font-size: 1.4rem;
   line-height: 1;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.skill .skill-emoji svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
 }
 
 /* GitHub logo is monochrome — make it follow the text color so it shows in dark mode */
@@ -1142,6 +1168,13 @@ html[data-theme="dark"] .chips li {
   place-items: center;
   font-size: 1.5rem;
   box-shadow: 0 4px 12px color-mix(in srgb, var(--cert-color, var(--accent)) 20%, transparent);
+  color: var(--cert-color, var(--accent));
+}
+
+.cert-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
 }
 
 .cert-body {
@@ -1312,7 +1345,24 @@ html[data-theme="dark"] .chips li {
   background: color-mix(in srgb, var(--ic-color, var(--accent)) 15%, var(--surface));
   border: 1px solid color-mix(in srgb, var(--ic-color, var(--accent)) 25%, transparent);
   box-shadow: 0 3px 10px color-mix(in srgb, var(--ic-color, var(--accent)) 15%, transparent);
+  color: var(--ic-color, var(--accent));
   transition: transform 0.2s;
+}
+
+.contact-ic svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
 }
 
 .contact-line:hover .contact-ic {

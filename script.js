@@ -6,13 +6,13 @@
 
   const root = document.documentElement;
 
-  /* ---------- Theme toggle (persisted, default is dark) ---------- */
+  /* ---------- Theme toggle (persisted, default is light) ---------- */
   const themeToggle = document.getElementById("themeToggle");
   const saved = localStorage.getItem("theme");
   if (saved) {
     root.setAttribute("data-theme", saved);
   } else {
-    root.setAttribute("data-theme", "dark");
+    root.setAttribute("data-theme", "light");
   }
   themeToggle.addEventListener("click", function () {
     const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -39,7 +39,7 @@
         })
         .catch(function () {
           const old = resumeBtn.textContent;
-          resumeBtn.textContent = "📄 Resume coming soon!";
+          resumeBtn.textContent = "Resume coming soon!";
           setTimeout(function () { resumeBtn.textContent = old; }, 2500);
         });
       e.preventDefault();
@@ -159,7 +159,7 @@
   form.addEventListener("submit", function (e) {
     const action = form.getAttribute("action") || "";
 
-    const SENT_MSG = "✅ Thank you for reaching out! Your message has been sent — I'll get back to you soon. Best regards, Sakthivel R.";
+    const SENT_MSG = "Thank you for reaching out! Your message has been sent — I'll get back to you soon. Best regards, Sakthivel R.";
 
     // Fallback: hand off to the visitor's email app (used if Formspree can't be
     // reached — e.g. opened as a local file, an ad-blocker, or no network).
